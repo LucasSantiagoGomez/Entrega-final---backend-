@@ -1,0 +1,15 @@
+<h1> orders </h1>
+{{#if userTickets}}
+<div>
+    {{#each userTickets}}
+</div>
+<div id="{{this._id}}">
+<h4>Order code:{{this.code}}</h4>    
+<p>Purchase date:{{this.purchase_datetime}}</p>
+{{#each this.products}}
+<p>{{this.quantity}}
+x
+{{this.productId.title}}
+- $
+{{this.productId.price}}</p>
+{{/each}}
